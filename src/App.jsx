@@ -22,6 +22,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const nav = [['درباره ما','#about'],['خدمات','#services'],['رویکرد ما','#approach'],['مقالات','#articles'],['تماس','#contact']];
   return <div className="site-shell">
+    <div className="site-background" aria-hidden="true"><iframe src="https://assets.pinterest.com/ext/embed.html?id=655344183306157655" title="MINDORA background ambience" loading="lazy" scrolling="no" /></div>
     <header className="navbar">
       <a className="brand" href="#home" aria-label="MINDORA خانه"><span className="brand-mark"><Brain size={23}/></span><span><b>MINDORA</b><small>MENTAL WELLNESS</small></span></a>
       <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="باز کردن منو"><Menu/></button>
