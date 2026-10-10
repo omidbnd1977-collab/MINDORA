@@ -8,3 +8,13 @@
 .services,.process{background-color:rgba(10,23,37,.78)}
 .footer{background-color:rgba(5,13,23,.88)}
 @media(max-width:700px){.site-background::after{background:rgba(5,14,25,.82)}.site-background iframe{width:max(100vw,100vh * .514);height:max(100vh,100vw * 1.945)}}
+
+/* Only the welcome/body section: Pinterest brain image background */
+.intro-brain-bg{position:relative;isolation:isolate;display:flex;justify-content:center;min-height:570px;overflow:hidden;background:rgba(7,17,31,.2)}
+.intro-brain-background{position:absolute;inset:0;z-index:-1;overflow:hidden;background:#07111f}
+.intro-brain-background::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,17,31,.78),rgba(7,17,31,.52)),linear-gradient(0deg,rgba(7,17,31,.76),rgba(7,17,31,.38))}
+.intro-brain-background iframe{position:absolute;left:50%;top:50%;width:max(100%,600px);height:max(100%,1167px);border:0;transform:translate(-50%,-50%) scale(1.15);opacity:.9;pointer-events:none}
+.intro-brain-bg .intro-copy{position:relative;z-index:1;max-width:760px;text-align:center;margin:auto;padding:45px 20px}
+.intro-brain-bg .intro-copy>p{margin-left:auto;margin-right:auto;color:#e0e7ef}
+.intro-brain-bg .intro-copy h2{color:#fff}
+@media(max-width:700px){.intro-brain-bg{min-height:560px}.intro-brain-background iframe{width:600px;height:1167px}.intro-brain-bg .intro-copy{padding:35px 8px}}
