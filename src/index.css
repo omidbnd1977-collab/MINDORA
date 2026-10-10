@@ -38,8 +38,8 @@
 /* Dedicated navigation views: keep the existing section designs unchanged. */
 .site-shell[class*="page-"] main > section { display: none; }
 .site-shell.page-about main > section.intro,
+.site-shell.page-approach main > section.approach { display: grid; }
 .site-shell.page-services main > section.services,
-.site-shell.page-approach main > section.approach,
 .site-shell.page-articles main > section.articles,
 .site-shell.page-contact main > section.contact { display: block; }
 .site-shell[class*="page-"] .navbar { position: relative; }
