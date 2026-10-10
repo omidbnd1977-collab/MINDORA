@@ -20,16 +20,17 @@ function SectionHeading({ eyebrow, title, text }) {
 
 export default function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const page = new URLSearchParams(window.location.search).get('page');
-  const pageClass = ['about','services','approach','articles','contact'].includes(page) ? `page-${page}` : '';
-  const nav = [['درباره ما','?page=about'],['خدمات','?page=services'],['رویکرد ما','?page=approach'],['مقالات','?page=articles'],['تماس','?page=contact']];
+  const routePages = {'about.html':'about','services.html':'services','approach.html':'approach','articles.html':'articles','contact.html':'contact'};
+  const page = routePages[window.location.pathname.split('/').pop()] || '';
+  const pageClass = page ? `page-${page}` : '';
+  const nav = [['درباره ما','/MINDORA/about.html'],['خدمات','/MINDORA/services.html'],['رویکرد ما','/MINDORA/approach.html'],['مقالات','/MINDORA/articles.html'],['تماس','/MINDORA/contact.html']];
   return <div className={`site-shell ${pageClass}`}>
     <div className="site-background" aria-hidden="true"><iframe src="https://assets.pinterest.com/ext/embed.html?id=655344183306157655" title="MINDORA background ambience" loading="lazy" scrolling="no" /></div>
     <header className="navbar">
       <a className="brand" href="#home" aria-label="MINDORA خانه"><span className="brand-mark"><Brain size={23}/></span><span><b>MINDORA</b><small>MENTAL WELLNESS</small></span></a>
       <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="باز کردن منو"><Menu/></button>
       <nav className={menuOpen ? 'nav-links open' : 'nav-links'}>{nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}</nav>
-      <a className="nav-cta" href="?page=contact">گفت‌وگو را آغاز کنید <ArrowLeft size={16}/></a>
+      <a className="nav-cta" href="/MINDORA/contact.html">گفت‌وگو را آغاز کنید <ArrowLeft size={16}/></a>
     </header>
 
     <main>
