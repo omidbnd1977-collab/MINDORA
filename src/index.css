@@ -34,3 +34,13 @@
 .intro-brain-bg .intro-copy>.eyebrow{font-size:clamp(30px,4vw,46px);font-weight:700;line-height:1.6;letter-spacing:0;text-align:right;color:var(--gold);margin-bottom:14px}
 .intro-brain-bg .intro-copy>p{font-size:clamp(19px,2.1vw,25px);line-height:2;text-align:right;margin-left:0;margin-right:0;max-width:none}
 @media(max-width:700px){.intro-brain-bg .intro-copy{padding:35px 8px}.intro-brain-bg .intro-copy>.eyebrow{font-size:clamp(27px,7vw,36px)}.intro-brain-bg .intro-copy>p{font-size:clamp(18px,4.8vw,22px)}}
+
+/* Dedicated navigation views: keep the existing section designs unchanged. */
+.site-shell[class*="page-"] main > section { display: none; }
+.site-shell.page-about main > section.intro,
+.site-shell.page-services main > section.services,
+.site-shell.page-approach main > section.approach,
+.site-shell.page-articles main > section.articles,
+.site-shell.page-contact main > section.contact { display: block; }
+.site-shell[class*="page-"] .navbar { position: relative; }
+.site-shell[class*="page-"] .footer { margin-top: 0; }
