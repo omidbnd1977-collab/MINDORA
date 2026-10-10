@@ -32,7 +32,7 @@ export default function App() {
 
     <main>
       <section className="hero" id="home">
-        <div className="hero-video-wrap"><iframe className="hero-video-embed" src="https://assets.pinterest.com/ext/embed.html?id=1124774075717055834" title="MINDORA background video" loading="eager" allow="autoplay; encrypted-media; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" scrolling="no" /></div>
+        <div className="hero-video-wrap"><video className="hero-video" autoPlay muted loop playsInline poster="https://i.pinimg.com/1200x/80/fd/0e/80fd0ecd3fd4247bc37171ca5e87ba45.jpg"><source src="https://v1.pinimg.com/videos/iht/expMp4/a5/2a/28/a52a2802732e5e4bbf56f297369cda2f_720w.mp4" type="video/mp4"/></video></div>
         <div className="hero-overlay"></div><div className="hero-glow"></div>
         <div className="hero-content">
           <div className="hero-pill"><Sparkles size={14}/> مراقبت از ذهن، با نگاهی انسانی</div>
