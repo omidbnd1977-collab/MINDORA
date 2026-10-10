@@ -27,3 +27,10 @@
 .intro-brain-bg .intro-copy{position:relative;z-index:2;max-width:760px;text-align:center;margin:auto;padding:45px 20px}
 .intro-brain-bg .intro-copy>p{margin-left:auto;margin-right:auto;color:#e0e7ef}
 .intro-brain-bg .intro-copy h2{color:#fff}
+
+
+/* Intro doctor credentials only: larger typography and right-to-left alignment */
+.intro-brain-bg .intro-copy{text-align:right;max-width:900px;width:100%}
+.intro-brain-bg .intro-copy>.eyebrow{font-size:clamp(30px,4vw,46px);font-weight:700;line-height:1.6;letter-spacing:0;text-align:right;color:var(--gold);margin-bottom:14px}
+.intro-brain-bg .intro-copy>p{font-size:clamp(19px,2.1vw,25px);line-height:2;text-align:right;margin-left:0;margin-right:0;max-width:none}
+@media(max-width:700px){.intro-brain-bg .intro-copy{padding:35px 8px}.intro-brain-bg .intro-copy>.eyebrow{font-size:clamp(27px,7vw,36px)}.intro-brain-bg .intro-copy>p{font-size:clamp(18px,4.8vw,22px)}}
