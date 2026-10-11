@@ -104,3 +104,19 @@
   }
   .intro-brain-bg .intro-copy { padding: 20px 0; }
 }
+
+
+/* Requested final adjustments: compact right-aligned credentials and seamless section edge */
+.intro-brain-bg .intro-copy { direction: rtl; text-align: right; max-width: 720px; }
+.intro-brain-bg .intro-copy > .eyebrow { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.45; text-align: right; }
+.intro-brain-bg .intro-copy > p { font-size: clamp(15px, 1.35vw, 19px); line-height: 1.8; text-align: right; }
+.intro-brain-bg { min-height: 470px; }
+.intro-brain-background::after {
+  background: linear-gradient(180deg, rgba(7,17,31,.08) 0%, rgba(7,17,31,.24) 48%, #07111f 100%),
+              linear-gradient(90deg, rgba(7,17,31,.68), rgba(7,17,31,.48));
+}
+@media (max-width: 700px) {
+  .intro-brain-bg { min-height: 420px; }
+  .intro-brain-bg .intro-copy > .eyebrow { font-size: 22px; }
+  .intro-brain-bg .intro-copy > p { font-size: 15px; line-height: 1.8; }
+}
