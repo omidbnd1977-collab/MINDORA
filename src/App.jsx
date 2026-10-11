@@ -23,7 +23,7 @@ export default function App() {
   const routePages = {'about.html':'about','services.html':'services','approach.html':'approach','articles.html':'articles','contact.html':'contact'};
   const page = routePages[window.location.pathname.split('/').pop()] || '';
   const pageClass = page ? `page-${page}` : '';
-  const nav = [['درباره ما','/MINDORA/about.html'],['خدمات','/MINDORA/services.html'],['رویکرد ما','/MINDORA/approach.html'],['مقالات','/MINDORA/articles.html'],['تماس','/MINDORA/contact.html']];
+  const nav = [['خانه','/MINDORA/'],['درباره ما','/MINDORA/?page=about'],['خدمات','/MINDORA/?page=services'],['رویکرد ما','/MINDORA/?page=approach'],['مقالات','/MINDORA/?page=articles'],['تماس','/MINDORA/?page=contact']];
   return <div className={`site-shell ${pageClass}`}>
     <div className="site-background" aria-hidden="true"><iframe src="https://assets.pinterest.com/ext/embed.html?id=655344183306157655" title="MINDORA background ambience" loading="lazy" scrolling="no" /></div>
     <header className="navbar">
