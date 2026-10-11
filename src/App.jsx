@@ -25,7 +25,7 @@ export default function App() {
   const pageClass = page ? `page-${page}` : '';
   const nav = [['خانه','/MINDORA/'],['درباره ما','/MINDORA/?page=about'],['خدمات','/MINDORA/?page=services'],['رویکرد ما','/MINDORA/?page=approach'],['مقالات','/MINDORA/?page=articles'],['تماس','/MINDORA/?page=contact']];
   return <div className={`site-shell ${pageClass}`}>
-    <div className="site-background" aria-hidden="true"><iframe src="https://assets.pinterest.com/ext/embed.html?id=655344183306157655" title="MINDORA background ambience" loading="lazy" scrolling="no" /></div>
+    <div className="site-background" aria-hidden="true"><div className="ambient-orb ambient-orb-one"></div><div className="ambient-orb ambient-orb-two"></div></div>
     <header className="navbar">
       <a className="brand" href="#home" aria-label="MINDORA خانه"><span className="brand-mark"><Brain size={23}/></span><span><b>MINDORA</b><small>MENTAL WELLNESS</small></span></a>
       <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="باز کردن منو"><Menu/></button>
@@ -35,7 +35,7 @@ export default function App() {
 
     <main>
       <section className="hero" id="home">
-        <div className="hero-video-wrap"><video className="hero-video" autoPlay muted loop playsInline poster="https://i.pinimg.com/1200x/80/fd/0e/80fd0ecd3fd4247bc37171ca5e87ba45.jpg"><source src="https://v1.pinimg.com/videos/iht/expMp4/a5/2a/28/a52a2802732e5e4bbf56f297369cda2f_720w.mp4" type="video/mp4"/></video></div>
+        <div className="hero-video-wrap" aria-hidden="true"><div className="hero-visual"><div className="hero-visual-orbit orbit-one"></div><div className="hero-visual-orbit orbit-two"></div><div className="hero-visual-core"><Brain size={82} strokeWidth={0.8}/></div><span className="hero-visual-dot dot-one"></span><span className="hero-visual-dot dot-two"></span></div></div>
         <div className="hero-overlay"></div><div className="hero-glow"></div>
         <div className="hero-content">
           <div className="hero-pill"><Sparkles size={14}/> مراقبت از ذهن، با نگاهی انسانی</div>
@@ -48,7 +48,7 @@ export default function App() {
         <a className="scroll-cue" href="#about"><span></span> برای کشف بیشتر پایین بروید</a>
       </section>
 
-      <section className="intro section-pad intro-brain-bg" id="about"><div className="intro-brain-background" aria-hidden="true"><iframe src="https://assets.pinterest.com/ext/embed.html?id=1074530792348183893&autoplay=1" title="MINDORA brain background" loading="eager" scrolling="no" allow="autoplay; encrypted-media; picture-in-picture" /></div><div className="intro-side-photo" aria-hidden="true"><img src="https://i.pinimg.com/736x/01/8e/f8/018ef869f136df93946d62fe38977ea6.jpg" alt="" loading="lazy" /></div><div className="intro-copy"><span className="eyebrow">دکتر علی ریاحی</span><p>متخصص اعصاب و روان<br/>فارغ‌التحصیل از دانشگاه شهید بهشتی تهران</p></div></section>
+      <section className="intro section-pad intro-brain-bg" id="about"><div className="intro-brain-background" aria-hidden="true"><div className="intro-visual-orbit orbit-a"></div><div className="intro-visual-orbit orbit-b"></div><div className="intro-visual-brain"><Brain size={116} strokeWidth={0.75}/></div><span className="intro-visual-glow"></span></div><div className="intro-copy"><span className="eyebrow">دکتر علی ریاحی</span><p>متخصص اعصاب و روان<br/>فارغ‌التحصیل از دانشگاه شهید بهشتی تهران</p></div></section>
 
       <section className="services section-pad" id="services"><SectionHeading eyebrow="چگونه همراهتان هستیم" title="مراقبت متناسب با شما" text="هر فرد تجربه‌ای منحصربه‌فرد دارد؛ مسیر مراقبت نیز باید با همین نگاه شکل بگیرد."/><div className="service-grid">{services.map(({icon: Icon,title,text}, i) => <article className="service-card" key={title}><div className="service-top"><span className="service-icon"><Icon size={24}/></span><span className="card-number">0{i+1}</span></div><h3>{title}</h3><p>{text}</p><a href="#contact" aria-label={'اطلاعات بیشتر درباره '+title}><ArrowLeft size={18}/></a></article>)}</div></section>
 
